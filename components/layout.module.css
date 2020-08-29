@@ -6,8 +6,10 @@
 
 .header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  border-bottom: solid 1px grey;
+  padding-bottom: 10px;
 }
 
 .headerImage {
@@ -16,8 +18,8 @@
 }
 
 .headerHomeImage {
-  width: 8rem;
-  height: 8rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .backToHome {

@@ -11,10 +11,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.globalHeader}>
-        <p className={utilStyles.headerTitle}>Olat</p>
-        <p className={utilStyles.headerText}>Escribo artículos de los temas que veo en mí día a día</p>
-      </section>
+      <section className={utilStyles.globalBanner} />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         {/* <h2 className={utilStyles.headingLg}>Blog</h2> */}
         <ul className={utilStyles.list}>

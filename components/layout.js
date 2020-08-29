@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
-const name = '[Your Name]'
-export const siteTitle = 'olat'
+const name = "Olat.";
+export const siteTitle = "olat.";
 
 export default function Layout({ children, home }) {
   return (
@@ -24,35 +24,59 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {/* <header className={styles.header}>
+      <header className={styles.header}>
         {home ? (
           <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <div className={utilStyles.bannerContent}>
+              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              <h3 className={utilStyles.bannerDescription}>
+                Escribo sobre los temas de codigo que usamos dia a dia.
+              </h3>
+            </div>
+            <div className={utilStyles.bannerLinks}>
+              <img
+                src="/images/profile.jpg"
+                className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+                alt={name}
+              />
+              <div className={utilStyles.extLinks}>
+                <a href="https://github.com/dorian-morones">Github</a>
+                <a href="https://www.linkedin.com/in/dorian-morones-meza-701b28122/">
+                  Linkedin
+                </a>
+                <a href="https://twitter.com/DorianMorones">Twitter</a>
+              </div>
+            </div>
           </>
         ) : (
           <>
-            <Link href="/">
-              <a>
+            <div className={utilStyles.bannerContent}>
+              <Link href="/">
+                <h1 className={utilStyles.heading2Xl}>{name}</h1>
+              </Link>
+              <h3 className={utilStyles.bannerDescription}>
+                Escribo sobre los temas de codigo que usamos dia a dia.
+              </h3>
+            </div>
+            <div className={utilStyles.bannerLinks}>
+              <Link href="/">
                 <img
                   src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                  className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
                   alt={name}
                 />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
-            </h2>
+              <div className={utilStyles.extLinks}>
+                <a href="https://github.com/dorian-morones">Github</a>
+                <a href="https://www.linkedin.com/in/dorian-morones-meza-701b28122/">
+                  Linkedin
+                </a>
+                <a href="https://twitter.com/DorianMorones">Twitter</a>
+              </div>
+            </div>
           </>
         )}
-      </header> */}
+      </header>
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
@@ -62,5 +86,5 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
-  )
+  );
 }
